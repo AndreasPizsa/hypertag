@@ -82,6 +82,15 @@ test('attributes', t => {
   ])
 })
 
+test('getTags with dash in tag', t => {
+  const randomTag = [randomString(), randomString()].join('-')
+  t.deepEqual(
+    parseTags(`<${randomTag}>`, randomTag),
+    [{
+      '<': randomTag
+    }])
+})
+
 test('getTags with non-tag string', t => {
   t.deepEqual(parseTags(''), [])
 })

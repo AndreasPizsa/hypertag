@@ -1,4 +1,4 @@
-const attrPattern = /(\w+)\s*(:?=\s*((?:(['"])(.*?)\4)|(?:[^\s>]+)))?/ms
+const attrPattern = /([\w\-_]+)\s*(:?=\s*((?:(['"])(.*?)\4)|(?:[^\s>]+)))?/ms
 
 module.exports = parse
 Object.assign(module.exports, {
