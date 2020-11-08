@@ -5,6 +5,7 @@
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.mjs",
   "source": "hypertag.js",
+  "types": "hypertag.d.ts",
   "scripts": {
     "build": "rimraf dist && microbundle",
     "test": "nyc ava",
