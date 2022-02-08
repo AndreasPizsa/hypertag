@@ -1,11 +1,11 @@
-const attrPattern = /([\w\-_]+)\s*(:?=\s*((?:(['"])(.*?)\4)|(?:[^\s>]+)))?/ms
+const attrPattern = /([\w\-_]+)\s*(:?=\s*((?:(['"])(.*?)\4)|[^\s>]+))?/ms
 
 module.exports = parse
 Object.assign(module.exports, {
   parse,
   parseAttrs,
   stripComments,
-  extend
+  extend,
 })
 
 function extend(tags, options) {
@@ -18,7 +18,7 @@ function parse(source, tags, options) {
   tags = tags.map(tag => tag === '*' ? '[^/\\s>]+' : tag)
   options = {
     tagKey: '<',
-    ...options
+    ...options,
   }
 
   const pattern = new RegExp(`<(?:${tags.join('|')})(?:\\s+(.*?))?>`, 'igms')
@@ -46,5 +46,6 @@ function parseAttrs(htmlTagText, tagKey = '<') {
 }
 
 function stripComments(html) {
-  return html.replace(/<!--(?:[\s]|.)*?-->/gims, '')
+  // eslint-disable-next-line unicorn/better-regex
+  return html.replace(/<!--([\s]|.)*?-->/gims, '')
 }

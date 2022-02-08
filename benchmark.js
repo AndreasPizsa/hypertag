@@ -17,7 +17,7 @@ const htmlparser2 = require('htmlparser2')
 const htmlParseStringify2 = require('html-parse-stringify2')
 const fastHtml = require('fast-html')
 const parse5 = require('parse5')
-const hypertag = require('./hypertag')
+const hypertag = require('./hypertag.js')
 
 const suite = (new Benchmark.Suite())
   .add('hypertag', () => {

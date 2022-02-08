@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rimraf dist && microbundle",
     "test": "nyc ava",
-    "prepublish": "npm test && npm build",
+    "prepublish": "npm test && npm run build",
     "pretest": "xo"
   },
   "keywords": [],
@@ -16,10 +16,10 @@
   "repository": "AndreasPizsa/hypertag",
   "license": "MIT",
   "devDependencies": {
-    "@andreaspizsa/eslint-config-xo": "^0.1.2",
-    "@commitlint/cli": "^7.2.1",
+    "@andreaspizsa/eslint-config-xo": "^0.2.0",
+    "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^7.1.2",
-    "ava": "^1.4.1",
+    "ava": "^4.0.1",
     "benchmark": "^2.1.4",
     "cheerio": "^1.0.0-rc.2",
     "coveralls": "^3.0.2",
@@ -29,22 +29,26 @@
     "html-tag-parser": "^1.0.0",
     "htmlparser2": "^3.10.0",
     "husky": "^1.2.0",
-    "microbundle": "^0.11.0",
+    "microbundle": "^0.14.2",
     "microtime": "^3.0.0",
-    "nyc": "^13.1.0",
+    "nyc": "^15.1.0",
     "parse5": "^5.1.0",
     "rimraf": "^2.6.2",
-    "standard-version": "^4.4.0",
-    "xo": "^0.23.0"
+    "standard-version": "^9.3.2",
+    "xo": "^0.47.0"
   },
   "xo": {
     "semicolon": false,
     "space": true,
+    "rules": {
+      "unicorn/prefer-module": 0,
+      "padding-line-between-statements": 0,
+      "comma-dangle": 0
+  },
     "extends": [
       "@andreaspizsa/eslint-config-xo"
     ]
   },
-  "dependencies": {},
   "description": "",
   "commitlint": {
     "extends": [
@@ -60,5 +64,9 @@
     "scripts": {
       "prerelease": "npm test && npm build"
     }
+  },
+  "postinstaller": {
+    "add your config here": true,
+    "see": "https://npmjs.com/postinstaller#readme"
   }
 }

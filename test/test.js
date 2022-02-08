@@ -1,6 +1,6 @@
-import test from 'ava'
-
-import parseTags, {stripComments, parseAttrs} from './hypertag'
+const test = require('ava')
+const parseTags = require('../hypertag.js')
+const {stripComments, parseAttrs} = require('../hypertag.js')
 
 test('full HTML', t => {
   const result = parseTags(`
@@ -117,5 +117,5 @@ test('match all tags', t => {
 })
 
 function randomString() {
-  return Math.random().toString(36).substr(2)
+  return Math.random().toString(36).slice(2)
 }
