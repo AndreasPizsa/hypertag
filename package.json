@@ -1,6 +1,6 @@
 {
   "name": "hypertag",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.mjs",
@@ -9,7 +9,8 @@
     "build": "rimraf dist && microbundle",
     "test": "nyc ava",
     "prepublish": "npm test && npm run build",
-    "pretest": "xo"
+    "pretest": "xo",
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "Andreas Pizsa <hopster@gmail.com> (https://github.com/AndreasPizsa)",
@@ -44,7 +45,7 @@
       "unicorn/prefer-module": 0,
       "padding-line-between-statements": 0,
       "comma-dangle": 0
-  },
+    },
     "extends": [
       "@andreaspizsa/eslint-config-xo"
     ]
@@ -62,7 +63,7 @@
   },
   "standard-version": {
     "scripts": {
-      "prerelease": "npm test && npm build"
+      "prerelease": "npm test && npm run build"
     }
   },
   "postinstaller": {
