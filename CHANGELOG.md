@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/AndreasPizsa/hypertag/compare/v0.0.4...v0.0.5) (2022-03-08)
+
+
+### Bug Fixes
+
+* stripComments bug that caused infinite loop ([dbd9819](https://github.com/AndreasPizsa/hypertag/commit/dbd98192908542ad1f71f05c438b052fe4ba7197))
+
 ### [0.0.4](https://github.com/AndreasPizsa/hypertag/compare/v0.0.3...v0.0.4) (2022-02-08)
 
 
