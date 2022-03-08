@@ -47,5 +47,5 @@ function parseAttrs(htmlTagText, tagKey = '<') {
 
 function stripComments(html) {
   // eslint-disable-next-line unicorn/better-regex
-  return html.replace(/<!--([\s]|.)*?-->/gims, '')
+  return html.replace(/<!--[\s\S]*?(?:-->)/gms, '')
 }
