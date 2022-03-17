@@ -40,7 +40,11 @@ function parseAttrs(htmlTagText, tagKey = '<') {
   while ((match = matchPattern.exec(htmlTagText)) !== null) {
     const key = match[1]
     attrs[key]
-      = (match[5] !== null && match[5]) || (match[3] !== null && match[3]) || true
+    = match[5] !== undefined
+        ? match[5]
+        : (match[3] !== undefined
+          ? match[3]
+          : true)
   }
   return attrs
 }

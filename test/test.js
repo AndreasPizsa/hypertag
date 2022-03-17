@@ -65,6 +65,9 @@ test('attributes', t => {
     <${randomTagName} ${randomAttr}= "${randomValue}">
     <${randomTagName} ${randomAttr} ='${randomValue}'>
     <${randomTagName} ${randomAttr} =  ${randomValue}>
+    <${randomTagName} emptyTag      =  "">
+    <${randomTagName} emptyTag      =  ''>
+    <${randomTagName} emptyTag      =  >
     <${randomTagName}
       ${randomAttr} = ${randomValue}>
     <${randomTagName} ${randomAttr}
@@ -77,6 +80,9 @@ test('attributes', t => {
     {[tagKey]: randomTagName, [randomAttr]: randomValue},
     {[tagKey]: randomTagName, [randomAttr]: randomValue},
     {[tagKey]: randomTagName, [randomAttr]: randomValue},
+    {[tagKey]: randomTagName, emptyTag: ''},
+    {[tagKey]: randomTagName, emptyTag: ''},
+    {[tagKey]: randomTagName, emptyTag: true},
     {[tagKey]: randomTagName, [randomAttr]: randomValue},
     {[tagKey]: randomTagName, [randomAttr]: randomValue}
   ])
