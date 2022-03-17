@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/AndreasPizsa/hypertag/compare/v0.0.5...v0.0.6) (2022-03-17)
+
+
+### Bug Fixes
+
+* return empty string for empty attributes (“”, ‘’) ([44288f3](https://github.com/AndreasPizsa/hypertag/commit/44288f3b4a47ffd3d560eae99827f3c25c6e430b))
+
 ### [0.0.5](https://github.com/AndreasPizsa/hypertag/compare/v0.0.4...v0.0.5) (2022-03-08)
 
 
